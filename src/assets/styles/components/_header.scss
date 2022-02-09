@@ -1,0 +1,10 @@
+.site-header{
+  display: flex;
+  flex-direction: column;
+}
+.site-header__inner-top{
+  background-color: #141416;
+  height: 175px;
+  display: flex;
+  align-items: center;
+}

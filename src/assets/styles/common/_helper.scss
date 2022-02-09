@@ -1,0 +1,22 @@
+/* PRESETS
+/––––––––––––––––––––––––*/
+.content-block {
+	//create the "container" with this applied to any row or any 100% width element
+	padding: 0 1.5rem;
+  @include media('>phone-land'){
+    padding: 0 4rem;
+  }
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+:focus {
+	outline: 0;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
