@@ -36,7 +36,7 @@
 
 			<?php get_template_part( 'components/header/search' ); ?>
 
-			<?php get_template_part( 'components/header/ecomnavigation' ); ?>
+			<?php get_template_part( 'components/header/ecom-navigation' ); ?>
 
 			<?php get_template_part( 'components/header/hamburger' ); ?>
 		</div>

@@ -2,9 +2,113 @@
   display: flex;
   flex-direction: column;
 }
+// TOP
 .site-header__inner-top{
   background-color: #141416;
   height: 175px;
   display: flex;
   align-items: center;
+  color: $color__bright;
+}
+
+// search form
+#searchform{
+  margin-left: auto;
+  margin-right: 34px;
+  .search-field{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #4A4A4A;
+    padding: 5px;
+    color: $color__gold;
+    font-family: $tag__fontname;
+    width: 200px;
+    font-size: 14px;
+
+  }
+  #searchSubmit{
+    background-color: transparent;
+    border: none;
+    &:hover{
+      cursor: pointer;
+    }
+    >svg{
+      top: 4px;
+      position: relative;
+    }
+  }
+}
+
+// ecom navigation
+.ecom-navigation{
+  display: flex;
+  .cart{
+    color: $color__bright;
+    font-family: $tag__fontname;
+    font-size: 14px;
+    >span{
+      display: inline-block;
+      margin-left: 15px;
+      &.item-tot{
+        color: $color__gold;
+      }
+    }
+  }
+}
+.ecom-nav{
+  display: flex;
+  align-items: center;
+  >p a{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    margin-left: 22px;
+  }
+}
+
+// BOTTOM
+.site-header__inner-bottom{
+  background-color: #4A4A4A;
+  color: $color__bright;
+}
+
+
+// NAVIGATION
+.site-header__menu{
+  width: 100%;
+  #menu_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 10px;
+  
+  }
+  .menu-item{
+    >a{
+      display: inline-block;
+      padding: 15px 10px;
+      color: $color__bright;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-family: $tag__fontname;
+      letter-spacing: 1.4px;
+      &:hover{
+        color: $color__link-hover;
+      }
+    }
+    &.current-menu-item{
+      >a{
+        background-color: $color__bright;
+        color: $color__text;
+      }
+    }
+  }
+}
+
+// MOBILE
+.search-mobile, .hamburger {
+  display: none;
+
 }

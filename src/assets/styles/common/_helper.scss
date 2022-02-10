@@ -2,9 +2,9 @@
 /––––––––––––––––––––––––*/
 .content-block {
 	//create the "container" with this applied to any row or any 100% width element
-	padding: 0 1.5rem;
+	padding: 0 20px;
   @include media('>phone-land'){
-    padding: 0 4rem;
+    padding: 0 80px;
   }
 }
 

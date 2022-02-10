@@ -51,6 +51,7 @@ $GTM_id = '';
 function wpseed_register_theme_menus() {
   register_nav_menus([
     'mainmenu' => __('Main menu'),
+    'legalmenu' => __('Legal menu'),
     'footermenu' => __('Footer menu')
   ]);
 }
@@ -61,7 +62,7 @@ add_action( 'init', 'wpseed_register_theme_menus');
   5.0 SETUP LOGIN PAGE 
 ==================================================================================*/
 
-$gFontUrl = "https://fonts.googleapis.com/css?family=Girassol&display=swap";
-$fontFamily = "'Girassol', cursive";
-$customLogo = get_stylesheet_directory_uri()."/dist/images/foundry-logo.svg";
-$mainColor = "#ff0000";
+$gFontUrl = "https://fonts.googleapis.com/css2?family=Work+Sans&display=swap";
+$fontFamily = "'Work Sans', sans-serif";
+$customLogo = get_stylesheet_directory_uri()."/dist/images/casaconcept_logo.svg";
+$mainColor = "#FEAF6C";

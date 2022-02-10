@@ -248,16 +248,18 @@ function we_login_logo() {
 		@import url('<?php echo $gFontUrl ?>');
 	<?php endif; ?>
 
-		body{
+		body.login{
 		<?php if($fontFamily): ?>
 			font-family: <?php echo $fontFamily ?>!important;
 		<?php endif; ?>
+    background-color:#141414;
 		}
 	
         #login h1 a, .login h1 a {
             background-image: url( <?php echo $customLogo ?>);
 			background-repeat: no-repeat;
-			background-size: 70px;
+			background-size: 214px;
+      width:284px;
 			<?php if($fontFamily): ?>
 			font-family: <?php echo $fontFamily ?>!important;
 			<?php endif; ?>
@@ -277,8 +279,11 @@ function we_login_logo() {
 			border: 2px solid <?php echo $mainColor ?>;
 		}
 		body.login div#login form#loginform p.submit input#wp-submit:hover{
-			background-color: #f5f5f5;
+			background-color: #FEAF6C;
+      border:none;
 		}
+    .login #backtoblog a, .login #nav a {color:#ffffff !important;}
+    .login #backtoblog a:hover, .login #nav a:hover {color:#FEAF6C !important;}
         body.login div#login p#nav a:hover {
             color: <?php echo $mainColor ?>;
         }

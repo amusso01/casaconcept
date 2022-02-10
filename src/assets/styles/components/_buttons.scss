@@ -4,15 +4,20 @@
 .btn {
 	min-width: $button__width;
 	min-height: $button__height;
+  font-family: $tag__fontname;
 	background-color: $button__color;
 	text-decoration: none;
-	display: flex;
+	display: inline-flex;
+  font-size: 1.4rem;
 	align-items: center;
 	justify-content: center;
 	color: $color__bright;
 	border-radius: $button__radius;
 	line-height: 0px;
+  transition: .3s;
+  font-weight: 600;
 	&:hover {
-		color: $color__bright;
+		color: $color__text;
+    background-color: #ead7b7;
 	}
 }
