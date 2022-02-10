@@ -1,3 +1,95 @@
 footer.site-footer {
 	background-color: $color__footerBg;
 }
+// TOP
+.site-footer__inner-top{
+  min-height:450px;
+  background-image: url(./../images/background_journey.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: $color__bright;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px ;
+  padding-bottom: 20px ;
+}
+
+// NAV
+.site-footer__nav{
+  width: 100%;
+}
+#footerNav{
+  margin: 48px 0;
+  display: flex;
+  border-top: 2px solid #DEDEDE;
+  border-bottom: 2px solid #DEDEDE;
+  justify-content: space-between;
+  .menu-item{
+    padding: 22px 0;
+    >a{
+      color: $color__bright;
+      font-family: $tag__fontname;
+      font-size: 1.4rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      @extend %link--hidden;
+    }
+  }
+}
+
+// BOTTOM
+.site-footer__inner-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px ;
+  padding-bottom: 20px ;
+}
+
+// LEGAL NAV
+#legalNav{
+  display: flex;
+  column-gap: 25px;
+  .menu-item{
+    >a{
+      font-family: $tag__fontname;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// SOCIAL
+.site-footer__social{
+  display: flex;
+  align-items: center;
+  column-gap: 37px;
+  >p{
+    color: #B7B7B7;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+}
+.site-footer__social-nav{
+  display: flex;
+  column-gap: 10px;
+  >p{
+    svg{
+      path{
+        transition: .3s;
+      }
+    }
+    &:hover{
+      svg{
+        path{
+          stroke: $color__gold;
+          fill: $color__bright;
+        }
+      }
+    }
+  }
+}

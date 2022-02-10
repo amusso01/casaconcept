@@ -18,7 +18,7 @@
           <h3 class="h1">Complete your journey</h3>
           <?php get_template_part( 'components/footer/nav' ) ?>
           <div class="site-footer__contact">
-            <a href="mailto:test@casaconcept.com" class="btn">GET IN TOUCH</a>
+            <a href="mailto:test@casaconcept.com" class="btn"><span>GET IN TOUCH</span></a>
           </div>
         </div>
 

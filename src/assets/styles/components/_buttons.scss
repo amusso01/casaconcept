@@ -16,8 +16,30 @@
 	line-height: 0px;
   transition: .3s;
   font-weight: 600;
-	&:hover {
-		color: $color__text;
-    background-color: #ead7b7;
-	}
+  >span{
+    position: relative;
+    color: $color__bright;
+    display: block;
+    font-size: 1.4rem;
+    line-height: normal;
+    transition: .3s;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0px;
+      bottom: -4px;
+      left: 0;
+      background-color: currentColor;
+      transition: height 0.3s $ease-in-out;
+    }
+  }
+  &:hover{
+    >span{
+      &::after{
+        height: 3px;
+      }
+    }
+  }
+
 }

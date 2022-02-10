@@ -1,6 +1,6 @@
 # Wordpress Starter Theme with Underscores, Bootstrap 4 (with SASS), and Webpack 4
 
-This is a Wordpress Starter Theme initially based on Underscores, packaged with Bootstrap 4 (with SASS), and built with Webpack 4.
+This is a Wordpress Starter Theme initially based on Underscores, packaged and built with Webpack 4.
 
 ### Prerequisites
 
