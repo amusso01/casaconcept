@@ -1,6 +1,7 @@
 import smoothscroll from "smoothscroll-polyfill";
 import lozad from "lozad";
 import hamburger from "./../part/hamburger";
+import productLoop from "../part/ProductLoop";
 
 export default {
 	init() {
@@ -13,20 +14,14 @@ export default {
 		hamburger();
 
 		// Lazy load image with lozad.js https://github.com/ApoorvSaxena/lozad.js
-		const lazyObserver = lozad(".lozad", {
-			load: function (el) {
-				el.src = el.dataset.src;
-				// On load add fade class (animation to be written)
-				// el.onload = function() {
-				// 	el.classList.add('fade')
-				// }
-			},
-		}); // lazy loads elements with default selector as '.lozad'
-		lazyObserver.observe();
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
 
-		const coolImage = document.querySelector(".lazy");
-		// ... trigger the load of a image before it appears on the viewport
-		lazyObserver.triggerLoad(coolImage);
+    const hasImageLoop = document.querySelector('.fdry-woo__img-wrapper');
+    if (typeof(hasImageLoop) != 'undefined' && hasImageLoop != null){
+      productLoop()
+    }
+
 	},
 
 	finalize() {

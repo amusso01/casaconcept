@@ -79,10 +79,9 @@ if ( ! function_exists( 'foundry_setup' ) ) :
 		wp_enqueue_style( 'foundry-styles' );
 		
 		// SCRIPT
-		wp_dequeue_script( 'jquery' );
-		wp_deregister_script( 'jquery' );
 		wp_register_script( 'foundry-js', get_template_directory_uri() . '/dist/scripts/' . foundry_asset_path( 'main.js' ), array(), '1.0', true );
 		wp_enqueue_script( 'foundry-js' );
+
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -127,6 +126,7 @@ if ( ! function_exists( 'foundry_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
 
 
 		/**

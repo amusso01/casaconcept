@@ -1,0 +1,197 @@
+.fdry-woo__singlePrdct-main{
+  display: flex;
+  margin:auto;
+  margin-top: 70px;
+  width: 95%;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+  .onsale{
+    position: absolute;
+    font-size: 14px;
+    font-family: $tag__fontname;
+    width: 55px;
+    height: 55px;
+    background-color: $color__main;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    color: $color__bright;
+    text-transform: uppercase;
+   left: -20px;
+   top: -20px;
+  }
+  .woocommerce-product-gallery {
+    flex-basis: 43%;
+    .flex-control-nav{
+      display: flex;
+      column-gap: 12px;
+      margin-top: 15px;
+    }
+  }
+  .entry-summary{
+    flex-basis: 50%;
+    .product_title{
+      font-size: 50px;
+      line-height: 55px;
+    }
+    .price{
+      font-family: $tag__fontname;
+      font-size: 16px;
+      margin: 24px 0;
+      font-weight: 300;
+      del{
+        font-size: 14px;
+      }
+    }
+    .woocommerce-product-details__short-description{
+      font-size: 16px;
+      letter-spacing: 0.32px;
+      line-height: 32px;
+      margin-bottom: 53px;
+    }
+    .variations{
+      margin-bottom: 28px;
+      .label{
+        text-align: left;
+        font-size: 14px;
+        font-family: $tag__fontname;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        line-height: 16px;
+        padding-bottom: 5px;
+        font-weight: 300;
+      
+      }
+      .value{
+        >select{
+          min-width: 200px;
+          height: 33px;
+          border-radius: 3px;
+          border:1px solid #EBEBEB;
+          background-color: #F8F8F8;
+          font-size: 14px;
+          font-family: $tag__fontname;
+        }
+      }
+      .reset_variations{
+        font-size: 13px;
+        padding-left: 10px;
+      }
+    }
+    .fdry-woo__qty-wrapper{
+      display: flex;
+      margin-bottom:47px ;
+      input.qty{
+        width: 106px;
+        height: 56px;
+        font-family: $tag__fontname;
+        font-size: 14px;
+        background-color: #EBEBEB;
+        margin-right: 18px;
+        border: none;
+        text-align: center;
+      }
+      button{
+        @extend .btn;
+        border: none;
+        font-family: $tag__fontname;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        font-size: 14px;
+        transition: all .3s;
+        &:hover{
+          cursor: pointer;
+          background-color: darken(#C9B597, 10%);
+        }
+      }
+    }
+    .product_meta{
+      margin-top: 47px;
+      display: flex;
+      flex-direction: column;
+      .sku_wrapper, .tagged_as {
+        font-family: $tag__fontname;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        color: #B7B7B7;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-bottom: 9px;
+        >span, >a{
+          font-size: 14px;
+          letter-spacing: 1.4px;
+          color: $color__text;
+        }
+        >a:hover{
+          color: $color__link-hover;
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-product-gallery__image{
+  display: flex!important;
+  justify-content: center;
+}
+.woocommerce-tabs{
+  margin-top: 85px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 130px;
+  margin-bottom: 100px;
+  .wc-tabs{
+
+    >li{
+      padding: 15px 0;
+      border-top: 1px solid #DEDEDE;
+      position: relative;
+      font-family: $tag__fontname;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      &:last-of-type{
+        border-bottom: 1px solid #DEDEDE;
+      }
+      &:after{
+        @include css-triangle($color__text, right, 5px);
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        transition: opacity .3s;
+        opacity: 0;
+      }
+      &.active{
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .panel{
+    font-size: 14px;
+    letter-spacing: 0.32px;
+    line-height: 32px;
+    color: #B7B7B7;
+    >h2{
+      font-family: $tag__fontname;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      font-weight: 400;
+      color: $color__text;
+    }
+    p{
+      font-size: 16px;
+      letter-spacing: 0.32px;
+      line-height: 32px;
+    }
+    th{
+      padding-right: 5px;
+    }
+  }
+}

@@ -7,7 +7,7 @@ html {
 	// Make everything look a little nicer in webkit
 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
-  font-size: calc(100vw / 1366 * 10) ;
+  font-size: calc(100vw / 1400 * 10) ;
 	font-weight: 400;
   @include media('<desktop'){
     font-size: calc(100vw / 1366 * 10) ;
@@ -67,6 +67,7 @@ a {
 	color: $color__link;
 	text-decoration: none;
 	font-size: $text__p;
+  transition: color .3s;
 	&:hover {
 		color: $color__link-hover;
 	}

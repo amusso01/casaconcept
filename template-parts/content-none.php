@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="no-results not-found">
+<section class="no-results not-found content-block">
 	<header class="page-header">
 		<h1 class="no-results-title"><?php esc_html_e( 'Content Not Found', 'foundry' ); ?></h1>
 	</header><!-- .page-header -->
