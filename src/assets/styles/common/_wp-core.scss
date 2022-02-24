@@ -114,3 +114,33 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000;
 }
+
+.wp-block-columns{
+  display: flex;
+  row-gap: 40px;
+  column-gap: 180px;
+  flex-wrap: wrap;
+
+}
+ul{
+  list-style: none;
+  font-family: $tag__fontname;
+  font-size: 16px;
+ li{
+   letter-spacing: 0.32px;
+ }
+}
+
+.wp-block-button{
+  >a{
+   @extend .btn; 
+
+}
+&:hover{
+  >a{
+    cursor: pointer;
+    color: $color__bright;
+    background-color: darken(#C9B597, 10%);
+  }
+}
+}

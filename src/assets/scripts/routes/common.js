@@ -1,7 +1,8 @@
 import smoothscroll from "smoothscroll-polyfill";
 import lozad from "lozad";
 import hamburger from "./../part/hamburger";
-import productLoop from "../part/ProductLoop";
+import productLoop from "../part/productLoop";
+import slider from "../part/slider";
 
 export default {
 	init() {
@@ -20,6 +21,11 @@ export default {
     const hasImageLoop = document.querySelector('.fdry-woo__img-wrapper');
     if (typeof(hasImageLoop) != 'undefined' && hasImageLoop != null){
       productLoop()
+    }
+
+    const hasSlider = document.querySelector('.block-slider');
+    if (typeof(hasSlider ) != 'undefined' && hasSlider  != null){
+      slider()
     }
 
 	},

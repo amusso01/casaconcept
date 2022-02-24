@@ -1,0 +1,119 @@
+.woocommerce-cart{
+  .entry-header{
+    margin-bottom: 80px;
+    h1{
+      text-align: center ;
+    } 
+  }
+  .woocommerce-cart-form{
+    .shop_table{
+      width: 100%;
+      th{
+        text-align: left;
+        font-family: $tag__fontname;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      td{
+        border-top: 2px solid $color__main;
+        text-align: left;
+        padding: 15px 10px;
+        font-size: 14px;
+      }
+      .qty {
+        width: 65px;
+        text-align: center;
+      }
+      .product-remove > a{
+        font-size: 25px;
+        font-weight: 400;
+        font-family: $tag__fontname;
+      }
+      .product-thumbnail img{
+        height: auto;
+        margin: auto;
+        width: 180px;
+      }
+      .coupon{
+        margin-bottom: 20px;
+        float: left;
+        padding-top: 35px;
+        >label{
+          font-family: $tag__fontname;
+          font-size: 17px;
+          margin-right: 5px;
+        }
+       
+        .input-text{
+          padding-left: 4px;
+      
+        }
+      }
+      .button{
+        border: none;
+        background-color: $color__main;
+        padding:  0 20px ;
+        border: 1px solid $color__main;
+        color: $color__bright;
+        font-family: $tag__fontname;
+        transition: .3s;
+        &:hover{
+          cursor: pointer;
+          background-color: darken(#C9B597, 10%);
+        }
+        &[name="update_cart"]{
+          margin-top: 36px;
+          float: right;
+        }
+       }
+    }
+  }
+  .cart-collaterals {
+    display: flex;
+    align-items: center;
+    .cart_totals {
+      width: 100%;
+      background-color: #f0f3f5;
+      padding: 40px 27px;
+      >h2{
+        margin-bottom: 44px;
+      }
+      .shop_table{
+        width: 100%;
+        th{
+          border-bottom: 2px solid $color__main;
+          padding: 15px 0px;
+          text-align: left;
+          font-family: $tag__fontname;
+          padding: 10px;
+          font-weight: 600;
+          font-size: 15px;
+        }
+        td[data-title]{
+          text-align: right;
+          font-family: $tag__fontname;
+          padding: 10px;
+          font-weight: 600;
+          font-size: 15px;
+          border-bottom: 2px solid $color__main;
+        }
+      }
+    }
+    .wc-proceed-to-checkout .button {
+      display: inline-block;
+      margin-top: 30px;
+      border: none;
+      background-color: $color__main;
+      padding: 8px 20px ;
+      border: 1px solid $color__main;
+      color: $color__bright;
+      font-family: $tag__fontname;
+      transition: .3s;
+      &:hover{
+        cursor: pointer;
+        background-color: darken(#C9B597, 10%);
+      }
+    }
+  }
+}

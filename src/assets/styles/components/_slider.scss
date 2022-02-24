@@ -1,0 +1,33 @@
+.glide__slides{
+  figure{
+    display: flex;
+    justify-content: center;
+    background-color: #141416;
+  }
+}
+.glide__arrows{
+  .glide__arrow{
+    background:transparent ;
+    border: none;
+    position: absolute;
+    top: 50%;
+    
+    transform: translateY(-50%);
+    >svg{
+      &:hover{
+        cursor: pointer;
+        >g{
+          >path{
+            fill: rgba($color__gold, 0.2);
+          }
+        }
+      }
+    }
+    &--left{
+      left: 30px;
+    }
+    &--right{
+      right: 30px;
+    }
+  }
+}

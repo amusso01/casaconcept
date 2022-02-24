@@ -10,14 +10,14 @@ function ea_setup() {
 	// Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => __( 'Blue', 'ea-starter' ),
-			'slug'  => 'blue',
-			'color'	=> '#165F97',
+			'name'  => __( 'Gold', 'ea-starter' ),
+			'slug'  => 'gold',
+			'color'	=> '#FEAF6C',
 		),
 		array(
-			'name'  => __( 'Orange', 'ea-starter' ),
-			'slug'  => 'orange',
-			'color' => '#F7931C',
+			'name'  => __( 'Grey', 'ea-starter' ),
+			'slug'  => 'gredy',
+			'color' => '#B7B7B7',
 		),
 	) );
 }
@@ -48,3 +48,26 @@ Allow certain block on Guttenberg
 }
 
 add_filter( 'allowed_block_types', 'misha_allowed_block_types' );*/
+
+/*==================================================================================
+Register new category in guttenberg block
+==================================================================================*/
+
+function my_foundry_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'fd-category',
+				'title' => __( 'FD Category', 'fd-category' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'my_foundry_category', 10, 2);
+
+/*==================================================================================
+LOAD CUSTOM ACF-GUTENBERG-BLOCKS
+==================================================================================*/
+
+require get_template_directory().'/components/blocks/slider.php';
