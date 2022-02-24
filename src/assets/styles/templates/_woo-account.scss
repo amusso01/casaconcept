@@ -1,0 +1,256 @@
+.woocommerce-account{
+  .entry-header{
+    margin-bottom: 80px;
+    h1{
+      text-align: center ;
+    } 
+  }
+  #customer_login{
+    h2{
+      text-align: center;
+      margin-bottom: 45px;
+      width: 100%;
+    }
+  }
+  .woocommerce-form , .woocommerce-ResetPassword{
+    width: 65%;
+    margin: auto;
+    margin-bottom: 60px;
+    font-family: $tag__fontname;
+    .woocommerce-form-row{
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      column-gap: 8px;
+      margin-bottom: 5px;
+      label{
+        font-family: $tag__fontname;
+        font-size: 14px;
+      }
+      input{
+        border: 1px solid $color__grey;
+        border-radius: 3px;
+        padding: 5px 0px 5px 5px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+    p.form-row{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      .woocommerce-form-login__rememberme{
+        font-size: 14px;
+        font-family: $tag__fontname;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        margin-bottom: 4px;
+      }
+    }
+    .fd-woo-form-didascaly{
+      margin-bottom: 20px;
+    }
+    .woocommerce-privacy-policy-text{
+      p, a{
+        margin-bottom: 20px;
+        line-height: 24px;
+        font-size: 15px;
+      }
+      a{
+        text-decoration: underline;
+      }
+    }
+    .woocommerce-button, .woocommerce-Button {
+      border: none;
+      font-family: $tag__fontname;
+      background-color: $color__main;
+      color: $color__bright;
+      width: 200px;
+      min-height: 45px;
+      text-transform: uppercase;
+      &:hover{
+        cursor: pointer;
+        background-color: darken(#C9B597, 10%);
+      }
+    }
+  }
+  // LOGGED IN USER PART
+  .fd-myaccount-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 70px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    @include media('>phone') {
+      width: 85%;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      padding: 0 0;
+      grid-template-columns: 1fr 3fr;
+    }
+    .woocommerce-MyAccount-content{
+      font-family: $tag__fontname;
+      padding: 30px 20px;
+    }
+    .woocommerce-MyAccount-navigation {
+      margin-bottom: 35px;
+      @include media('>phone') {
+        margin-bottom: 0px;
+      }
+      ul {
+        background-color: $color__footerBg;
+        list-style: none;
+        padding: 30px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        @include media('>phone') {
+          display: block;
+        }
+      }
+      li {
+        margin-right: 15px;
+        margin-bottom: 15px;
+        @include media('>phone') {
+          margin-bottom: 15px;
+        }
+        a {
+          font-weight: 500;
+          color: #707070;
+        }
+        &.is-active {
+          a {
+            color: $color__main;
+          }
+        }
+        &:last-of-type {
+          margin-right: 0px;
+          @include media('>phone') {
+            margin-top: 70px;
+          }
+        }
+        &:first-of-type{
+          display: none;
+          @include media('>phone') {
+            display: block;
+          }
+        }
+      }
+    }
+    .woocommerce-orders-table {
+      width: 100%;
+      border-collapse: collapse;
+      th {
+        text-align: left;
+        padding: 10px;
+        font-size: 14px;
+      }
+      td {
+        border-top: 2px solid $color__main;
+        text-align: left;
+        padding: 15px 10px;
+      }
+    }
+    .woocommerce-EditAccountForm {
+      > fieldset {
+        border: none;
+        margin-top: 30px;
+        legend {
+          margin-bottom: 5px;
+          font-weight: 500;
+          font-size: 21px;
+        }
+        .woocommerce-form-row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          margin-bottom: 10px;
+          label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+          input {
+            border: 2px solid $color__main;
+            padding: 10px 5px;
+            width: 280px;
+          }
+        }
+      }
+      .button {
+        background-color: $color__main;
+        color: $color__bright;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        font-weight: 500;
+        margin-bottom: 25px;
+        font-size: 14px;
+        padding: 15px 25px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  p.form-row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    label{
+      font-family: $tag__fontname;
+      font-size: 14px;
+    }
+    input, select{
+      border: 1px solid $color__grey;
+      border-radius: 3px;
+      padding: 5px 0px 5px 5px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  .button{
+    border: none;
+    font-family: $tag__fontname;
+    background-color: $color__main;
+    color: $color__bright;
+    min-width: 200px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 45px;
+    text-transform: uppercase;
+    font-size: 16px;
+    &:hover{
+      cursor: pointer;
+      background-color: darken(#C9B597, 10%);
+    }
+  }
+  address{
+    font-size: 15px;
+  }
+  .woocommerce-orders-table {
+    font-size: 14px;
+  }
+  .woocommerce-orders-table__cell-order-number{
+    a{
+      font-size: 14px;
+    }
+  }
+  .woocommerce-order-details{
+    .woocommerce-table {
+      width: 100%;
+      th{
+        text-align: left;
+      }
+    }
+  }
+}

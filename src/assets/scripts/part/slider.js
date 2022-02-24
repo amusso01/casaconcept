@@ -1,10 +1,12 @@
 import Glide from '@glidejs/glide'
 
-const slider = document.querySelectorAll('.glide')
+export default function slider(){
+  const slider = document.querySelectorAll('.glide')
 
-slider.forEach(item=>{
-  new Glide(item, {
-    type: 'carousel',
-    autoplay: 5000
-  }).mount()
-})
+  slider.forEach(item=>{
+    new Glide(item, {
+      type: 'carousel',
+      autoplay: 5000
+    }).mount()
+  })
+}

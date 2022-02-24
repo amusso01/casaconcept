@@ -83,4 +83,36 @@ function woocommerce_after_add_to_cart_button_func() {
 
 }
 
-// remove cat from meta
+// Add wrapper in my account
+// The div is closed in my-account.php
+add_action( 'woocommerce_before_account_navigation', 'woocommerce_before_account_navigation_function' );
+function woocommerce_before_account_navigation_function() {
+
+  // Echo content.
+  echo '<div class="fd-myaccount-wrapper">';
+
+}
+
+
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options –> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 32;
+  return $cols;
+}
+
+/**
+*  Redirect shop to home
+*/
+function custom_shop_page_redirect() {
+  if( is_shop() && !is_search()){
+      wp_redirect( site_url( '/' ) );
+      exit();
+  }
+}
+add_action( 'template_redirect', 'custom_shop_page_redirect' );

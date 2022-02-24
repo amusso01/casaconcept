@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(224px, 250px));
   column-gap: 25px;
+  justify-content: center;
+  row-gap: 25px;
   &.related{
     display: block;
     margin-bottom: 100px;
@@ -116,4 +118,8 @@
   background-color: #efefef;
   border-top: 2px solid $color__main;
   text-transform: uppercase;
+}
+.woocommerce-LostPassword {
+  font-family: $tag__fontname;
+  font-size: 15px;
 }
