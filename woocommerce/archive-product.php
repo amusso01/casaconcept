@@ -30,9 +30,9 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 
-<div class="fdry-woo__categories content-block">
+<div class="fdry-woo__categories ">
   <div class="line"></div>
-  <header class="woocommerce-products-header">
+  <header class="woocommerce-products-header content-block">
     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
       <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
     <?php endif; ?>
@@ -47,6 +47,7 @@ do_action( 'woocommerce_before_main_content' );
     do_action( 'woocommerce_archive_description' );
     ?>
   </header>
+  <div class="archive-store__inner content-block">
 <?php
 if ( woocommerce_product_loop() ) {
 
@@ -91,6 +92,7 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 ?>
+  </div><!-- archive-store__inner -->
 </div> <!-- fdry-woo__categories content-block  -->
 <?php
 

@@ -84,6 +84,13 @@
   }
 }
 
+.wc-block-grid__products .wc-block-grid__product{
+
+    flex: 1 0 calc(23% - 75px)!important;
+    max-width: calc(25% - 50px)!important;
+  
+}
+
 // FOR BEST SELLER SECTION SEE WOO-GENERAL.scss
 .fd-bestselling{
   a,p,h1,h2,h3,h4,h5,h6{

@@ -4,6 +4,7 @@ import hamburger from "./../part/hamburger";
 import productLoop from "../part/productLoop";
 import blockProductLoop from "../part/blockProductLoop";
 import slider from "../part/slider";
+import filter from "./../part/filter";
 
 export default {
 	init() {
@@ -33,6 +34,14 @@ export default {
     if (typeof(hasSlider ) != 'undefined' && hasSlider  != null){
       slider()
     }
+
+     // FILTER
+     const filterCheck = document.getElementById('filter__cta');
+
+     if (typeof(filterCheck) != 'undefined' && filterCheck != null)
+     {
+       filter();
+     }
 
 	},
 

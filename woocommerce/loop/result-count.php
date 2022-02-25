@@ -38,5 +38,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     // phpcs:enable WordPress.Security
     ?>
   </p>
+
+  <div class="filter__cta">
+    <p id="filter__cta"><span><i><svg xmlns="http://www.w3.org/2000/svg" width="16.485" height="12" viewBox="0 0 16.485 12"><g data-name="Group 37"><g data-name="Group 36" transform="translate(-95.639 -445)"><path data-name="Path 182" d="M96.639 447.543h14.485" fill="none" stroke="#64afa9" stroke-linecap="round" stroke-width="2"></path><path data-name="Path 183" d="M96.639 454.543h14.485" fill="none" stroke="#64afa9" stroke-linecap="round" stroke-width="2"></path><circle data-name="Ellipse 15" cx="2.5" cy="2.5" r="2.5" transform="translate(100 445)" fill="#64afa9"></circle><circle data-name="Ellipse 16" cx="2.5" cy="2.5" r="2.5" transform="translate(104 452)" fill="#64afa9"></circle></g></g></svg></i></span>Filter &amp; Sort</p>
+  </div>
 </div> <!--  .fdry-woo__archive-bar  -->
+
 <div class="line"></div>
+
