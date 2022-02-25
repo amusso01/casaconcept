@@ -1,0 +1,97 @@
+.fd-home__banner{
+  margin-top: 30px;
+  position: relative;
+  .banner{
+    position: relative;
+    height: 480px;
+    width: 100%;
+    margin: auto;
+    >img{
+      @extend %cover;
+      // object-fit: cover;
+    }
+  }
+  .fd-home__banner-text{
+    position: absolute;
+    color: $color__bright;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    >p{
+      color: $color__bright;
+      margin: 10px 0 24px;
+    }
+    a{
+      color: $color__bright;
+      &:hover{
+        background-color: darken(#C9B597, 10%);
+      }
+    }
+  }
+}
+
+.fd-shop-cat{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(6 , 1fr);
+  row-gap: 24px;
+  column-gap: 24px;
+  margin-bottom: 134px;
+  .fd-shop-cat__single{
+    grid-column: span 2;
+    &:first-of-type, &:nth-of-type(2){
+      grid-column: span 3;
+    }
+    >a{
+      &:hover{
+        .title{
+          &::after{
+            @extend %link__line--visible;
+          }
+        }
+      }
+    }
+    figure{
+      position: relative;
+      height: 332px;
+      width: 100%;
+      margin: auto;
+      >img{
+        @extend %cover;
+        object-fit: cover;
+      }
+      .title{
+        position: absolute;
+        color: $color__bright;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: $tag__fontname;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        text-align: center;
+      
+        @extend %link__wrapper;
+        &:after {
+          @extend %link__line;
+          @extend %link__line--hidden;
+        }
+      }
+    }
+  }
+}
+
+// FOR BEST SELLER SECTION SEE WOO-GENERAL.scss
+.fd-bestselling{
+  a,p,h1,h2,h3,h4,h5,h6{
+    width: 65%;
+    margin: auto;
+  }
+  p{
+    line-height: 32px;
+    letter-spacing: 0.32px;
+  }
+}

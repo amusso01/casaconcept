@@ -116,3 +116,12 @@ function custom_shop_page_redirect() {
   }
 }
 add_action( 'template_redirect', 'custom_shop_page_redirect' );
+
+
+/**
+ * Disable WooCommerce block styles (front-end).
+ */
+function themesharbor_disable_woocommerce_block_styles() {
+  wp_dequeue_style( 'wc-blocks-style' );
+}
+add_action( 'wp_enqueue_scripts', 'themesharbor_disable_woocommerce_block_styles' );
