@@ -87,6 +87,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s;
     width: 100%;
     column-gap: 10px;
     @include media('<phone-land'){
@@ -97,11 +98,9 @@
       z-index: 10;
       pointer-events: none;
       opacity: 0;
-      transition: all .3s;
       top: -30px;  
       padding-bottom: 50px;
       padding-top: 50px;
-
       &.is-active{
         opacity: 1;
         pointer-events: all;
@@ -114,11 +113,11 @@
       }
     }
 
-    &.hidden_mobile{
-      @include media('<phone-land'){
-        display: none;
-      }
-    }
+    // &.hidden_mobile{
+    //   @include media('<phone-land'){
+    //     display: none;
+    //   }
+    // }
   }
   .menu-item{
     >a{
@@ -162,10 +161,12 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  z-index: 10;
   #searchformMobile{
     @extend #searchform;
-    display: block;
+    display: none;
     @include media('<phone-land'){
+      display: block;
       opacity: 0;
       pointer-events: none;
       transition: opacity .3s;
