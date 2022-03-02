@@ -1,5 +1,5 @@
 // Archive loop
-.products, .wc-block-grid__products{
+.products, .fd-bestselling .wc-block-grid__products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(224px, 250px));
   column-gap: 25px;

@@ -14,6 +14,12 @@ footer.site-footer {
   align-items: center;
   padding-top: 20px ;
   padding-bottom: 20px ;
+  @include media('<phone-land'){
+    .h1{
+      font-size: 45px;
+      text-align: center;
+    }
+  }
 }
 
 // NAV
@@ -26,6 +32,11 @@ footer.site-footer {
   border-top: 2px solid #DEDEDE;
   border-bottom: 2px solid #DEDEDE;
   justify-content: space-between;
+  @include media('<phone'){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .menu-item{
     padding: 22px 0;
     >a{
@@ -46,16 +57,28 @@ footer.site-footer {
   align-items: center;
   padding-top: 20px ;
   padding-bottom: 20px ;
+  @include media('<phone-land'){
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  @include media('<phone'){
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }
 
 // LEGAL NAV
 #legalNav{
   display: flex;
   column-gap: 25px;
+  @include media('<phone'){
+    flex-direction: column;
+    row-gap: 10px;
+  }
   .menu-item{
     >a{
       font-family: $tag__fontname;
-      font-size: 1.2rem;
+      font-size: 12px;
       letter-spacing: 1.2px;
       text-transform: uppercase;
     }
@@ -67,9 +90,13 @@ footer.site-footer {
   display: flex;
   align-items: center;
   column-gap: 37px;
+  @include media('<phone'){
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
   >p{
     color: #B7B7B7;
-    font-size: 1.2rem;
+    font-size: 12px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
   }

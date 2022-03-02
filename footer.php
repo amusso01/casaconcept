@@ -36,7 +36,6 @@
           </div>
 
         </div>
-        <div><strong>Current template:</strong> <?php echo get_page_template(); ?></div>
       </footer><!-- #colophon -->
 
     </div><!-- #page -->

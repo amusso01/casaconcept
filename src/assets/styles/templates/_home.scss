@@ -8,7 +8,7 @@
     margin: auto;
     >img{
       @extend %cover;
-      // object-fit: cover;
+      object-fit: cover;
     }
   }
   .fd-home__banner-text{
@@ -42,6 +42,18 @@
     grid-column: span 2;
     &:first-of-type, &:nth-of-type(2){
       grid-column: span 3;
+    }
+    @include  media('<phone-land'){
+      grid-column: span 3;
+      &:last-of-type{
+        grid-column: span 6;
+      }
+    }
+    @include  media('<phone'){
+        grid-column: span 6;
+        &:first-of-type, &:nth-of-type(2){
+          grid-column: span 6;
+        }
     }
     >a{
       &:hover{
@@ -86,8 +98,8 @@
 
 .wc-block-grid__products .wc-block-grid__product{
 
-    flex: 1 0 calc(23% - 75px)!important;
-    max-width: calc(25% - 50px)!important;
+    // flex: 1 0 calc(23% - 75px)!important;
+    max-width: 100%!important;
   
 }
 
@@ -96,6 +108,9 @@
   a,p,h1,h2,h3,h4,h5,h6{
     width: 65%;
     margin: auto;
+    @include media('<phone-land'){
+      width: 80%;
+    }
   }
   p{
     line-height: 32px;
