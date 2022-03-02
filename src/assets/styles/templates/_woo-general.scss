@@ -5,6 +5,9 @@
   column-gap: 25px;
   justify-content: center;
   row-gap: 25px;
+  @include media('<phone'){
+    row-gap: 65px;
+  }
   &.related{
     display: block;
     margin-bottom: 100px;
@@ -37,6 +40,12 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity .5s $ease-in-out;
+    @include media('<phone'){
+      position: relative;
+      opacity: 1;
+      pointer-events: all;
+      top: 10px;
+    }
   }
   .onsale, .wc-block-grid__product-onsale{
     position: absolute;
@@ -93,6 +102,14 @@
   h2{
     &:hover{
       color: $color__link-hover;
+    }
+  }
+}
+
+.wc-block-grid__products{
+  .wp-block-button a{
+    @include media('<phone'){
+      left: 37%!important;
     }
   }
 }

@@ -21,12 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="fdry-woo__archive-bar">
-  <form class="woocommerce-ordering" method="get">
-    <select name="orderby" onchange="this.form.submit()" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
-      <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-        <option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
-      <?php endforeach; ?>
-    </select>
-    <input type="hidden" name="paged" value="1" />
-    <?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
-  </form>
+  <div class="fdry-woo__sort">
+    <form class="woocommerce-ordering" method="get">
+      <select name="orderby" onchange="this.form.submit()" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
+        <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
+          <option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
+        <?php endforeach; ?>
+      </select>
+      <input type="hidden" name="paged" value="1" />
+      <?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
+    </form>

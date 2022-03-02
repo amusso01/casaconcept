@@ -78,26 +78,27 @@
   // LOGGED IN USER PART
   .fd-myaccount-wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 3fr;
     column-gap: 70px;
+    margin: auto;
     margin-top: 50px;
     margin-bottom: 100px;
-    @include media('>phone') {
-      width: 85%;
-      margin: auto;
-      margin-top: 50px;
-      margin-bottom: 100px;
-      padding: 0 0;
-      grid-template-columns: 1fr 3fr;
+    width: 85%;
+    @include media('<phone'){
+      grid-template-columns: 1fr;
+      width: 100%;
+      column-gap: 15px;
     }
     .woocommerce-MyAccount-content{
       font-family: $tag__fontname;
       padding: 30px 20px;
+      overflow-x: auto;
     }
     .woocommerce-MyAccount-navigation {
-      margin-bottom: 35px;
+      border-bottom: 2px solid $color__grey;
       @include media('>phone') {
         margin-bottom: 0px;
+        border-bottom: 0px solid $color__grey;
       }
       ul {
         background-color: $color__footerBg;

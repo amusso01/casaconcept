@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+  @include media('<phone'){
+    row-gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .orderby{
     margin-right: 18px;
     padding: 5px;
@@ -15,6 +20,15 @@
     font-family: $tag__fontname;
     letter-spacing: 1.4px;
     text-transform: uppercase;
+  }
+  .fdry-woo__sort{
+    display: flex;
+    align-items: center;
+    @include media('<phone'){
+      flex-direction: column;
+      row-gap: 15px;
+     
+    }
   }
 }
 .fdry-woo__categories{

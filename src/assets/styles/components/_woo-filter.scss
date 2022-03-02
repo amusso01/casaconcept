@@ -16,6 +16,9 @@
   padding: 5px 15px;
   border-radius: 3px;
   transition: .3s;
+  @include media('<phone'){
+    margin-left: 0;
+  }
   &:hover{
     cursor: pointer;
     background-color: rgba($color__grey , 0.2)

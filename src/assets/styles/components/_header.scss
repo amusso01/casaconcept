@@ -1,6 +1,13 @@
 .site-header{
   display: flex;
   flex-direction: column;
+  .site-header__logo{
+    svg{
+      @include media('<phone'){
+        width: 145px;
+      }
+    }
+  }
 }
 // TOP
 .site-header__inner-top{
@@ -165,6 +172,7 @@
   z-index: 10;
   #searchformMobile{
     @extend #searchform;
+    margin-right: 20px;
     display: none;
     @include media('<phone-land'){
       display: block;
