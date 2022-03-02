@@ -38,10 +38,15 @@
 
 			<?php get_template_part( 'components/header/ecom-navigation' ); ?>
 
-			<?php get_template_part( 'components/header/hamburger' ); ?>
+		
 		</div>
 		<div class="site-header__inner-bottom content-block">
       <?php get_template_part( 'components/header/navigation' ); ?>
+    
+      <?php get_template_part( 'components/header/hamburger' ); ?>
+      <div class="mobile-search-text">
+        <?php get_template_part( 'components/header/search-mobile' ); ?>
+      </div>
     </div>
 	</header><!-- .site-header -->
 

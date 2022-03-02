@@ -49,6 +49,11 @@
     >span{
       display: inline-block;
       margin-left: 15px;
+      &.price-tot{
+        @include media('<phone-land'){
+          display: none;
+        }
+      }
       &.item-tot{
         color: $color__gold;
       }
@@ -71,6 +76,7 @@
 .site-header__inner-bottom{
   background-color: #4A4A4A;
   color: $color__bright;
+  min-height: 46.36px;
 }
 
 
@@ -83,7 +89,36 @@
     justify-content: center;
     width: 100%;
     column-gap: 10px;
-  
+    @include media('<phone-land'){
+      position: absolute;
+      left: 0;
+      flex-direction: column;
+      background-color: #4A4A4A;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0;
+      transition: all .3s;
+      top: -30px;  
+      padding-bottom: 50px;
+      padding-top: 50px;
+
+      &.is-active{
+        opacity: 1;
+        pointer-events: all;
+        top: 0px;
+        .menu-item{
+          >a{
+            padding: 14px 10px;
+          }
+        }
+      }
+    }
+
+    &.hidden_mobile{
+      @include media('<phone-land'){
+        display: none;
+      }
+    }
   }
   .menu-item{
     >a{
@@ -108,7 +143,44 @@
 }
 
 // MOBILE
-.search-mobile, .hamburger {
+.search-mobile {
   display: none;
+  @include media('<phone-land'){
+    display: block;
+    margin-left: auto;
+  }
+}
 
+#searchform{
+  @include media('<phone-land'){
+    display: none;
+  }
+}
+
+.mobile-search-text{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  #searchformMobile{
+    @extend #searchform;
+    display: block;
+    @include media('<phone-land'){
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      &.is-active{
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  #searchformMobile .search-field{
+    border-color: $color__bright;
+    width: 170px;
+    &::placeholder{
+      color: $color__bright;
+    }
+  }
+ 
 }

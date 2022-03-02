@@ -1,59 +1,38 @@
-$hamburger-padding-x: 0px;
-$hamburger-padding-y: 0px;
-$hamburger-layer-width: 30px;
-$hamburger-layer-height: 3px;
-$hamburger-layer-spacing: 4px;
-$hamburger-layer-color: #000;
-$hamburger-layer-border-radius: 1px;
-$hamburger-hover-opacity: 0.7 !default;
-$hamburger-active-layer-color: $hamburger-layer-color !default;
-$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+.site-header__inner-bottom{position: relative;}
+.hamburger .line{
+  width: 27px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: $color__bright;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 
-// To use CSS filters as the hover effect instead of opacity,
-// set $hamburger-hover-use-filter as true and
-// change the value of $hamburger-hover-filter accordingly.
-$hamburger-hover-use-filter: false !default;
-$hamburger-hover-filter: opacity(50%) !default;
-$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+.hamburger:hover{
+  cursor: pointer;
+}
 
-// Types (Remove or comment out what you don’t need)
-$hamburger-types: (
-	// 3dx,
-		// 3dx-r,
-		// 3dy,
-		// 3dy-r,
-		// 3dxy,
-		// 3dxy-r,
-		// arrow,
-		// arrow-r,
-		// arrowalt,
-		// arrowalt-r,
-		// arrowturn,
-		// arrowturn-r,
-		// boring,
-		collapse,
-	// collapse-r,
-		// elastic,
-		// elastic-r,
-		// emphatic,
-		// emphatic-r,
-		// minus,
-		// slider,
-		// slider-r,
-		// spring,
-		// spring-r,
-		// stand,
-		// stand-r,
-		// spin,
-		// spin-r,
-		// squeeze,
-		// vortex,
-		// vortex-r
-);
+#hamburger-1{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  @include media('>phone-land'){
+    display: none;
+  }
+}
 
-@import "~hamburgers/_sass/hamburgers/hamburgers";
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
 
-// CUSTOM TWEAKS
-.hamburger {
-	display: flex;
+#hamburger-1.is-active .line:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
 }

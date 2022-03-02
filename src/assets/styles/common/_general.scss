@@ -13,7 +13,7 @@ html {
     font-size: calc(100vw / 1366 * 10) ;
   }
   @include media('<tablet'){
-    font-size: calc(100vw / 820 * 10) ;
+    font-size: calc(100vw / 1140 * 10) ;
   }
   @include media('<phone'){
     font-size: calc(100vw / 410 * 10) ;
